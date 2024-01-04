@@ -6,11 +6,9 @@
   "author": "Shatrughn Gupta",
   "license": "MIT",
   "dependencies": {
-    "socket.io": "2.0.3"
+    "socket.io": "^2.5.0"
   },
-
   "scripts": {
     "start": "node app.js"
   }
-  
 }
