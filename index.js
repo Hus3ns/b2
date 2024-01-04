@@ -35,8 +35,8 @@ const board = io.of('/board')
 
 // passwords for host and users, keep it null for no pass
 const pass = {
-  '/host': 12123,
-  '/user': 12124
+  '/host': '12123',
+  '/user': '12124'
 }
 const authorize = (socket, next) => {
   if (pass[socket.nsp.name] && socket.handshake.query.pass !== pass[socket.nsp.name]) {
