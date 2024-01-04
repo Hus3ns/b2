@@ -121,20 +121,65 @@
         -ms-user-select: none;
         user-select: none;
       }
+
+      .user-label {
+    display: block;
+    margin-bottom: 5px;
+    float: left;
+    /* other styles */
+}
+
+.user-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* other styles */
+}
+
+.join-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* other styles */
+}
+
+.join-button:hover {
+    background-color: #0056b3;
+    /* other styles */
+}
+
+.form-logo {
+    display: block;
+    max-width: 320px; /* Adjust based on your logo's size */
+    height: auto;
+    margin: 0 auto 20px; /* Center the logo and add space below */
+}
+
+
     </style>
   </head>
   <body>
+
     <div id="user-input" class="grid">
       <div class="grid-cell">
-        <h2>Enter Event</h2>
-        <label>Name:</label>
-        <input type="text" id="user-name" placeholder="Name" title="Name of the user.">
-        <label>Password:</label>
-        <input type="password" id="event-pass" placeholder="Password" title="Password to enter event. Keep empty for no password.">
-        <input type="button" id="join" value="Join">
+        <img src="nw-bt-logo.png" alt="Logo" class="form-logo">
+          <h2>Join </h2>
+          <label class="user-label" for="user-name">Name:</label>
+          <input type="text" id="user-name" class="user-input" placeholder="Name" title="Name of the user." required>
+  
+          <label class="user-label" for="event-pass">Password:</label>
+          <input type="password" id="event-pass" class="user-input" placeholder="Password" title="Password to enter event. Keep empty for no password." pattern="\d*" required>
+  
+          <input type="button" id="join" class="join-button" value="Join">
       </div>
-    </div>
-
+  </div>
+  
     <div id="buzz-container" class="grid hide">
       <!-- http://soundbible.com/1542-Air-Horn.html -->
       <audio id="buzzer-audio" src="buzzer.mp3"></audio>
