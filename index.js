@@ -134,6 +134,6 @@ user.on('connection', (socket) => {
   })
 })
 
-httpServer.listen(4000, '0.0.0.0', function() {
-  console.log('Listening at: http://localhost:4000')
-})
+httpServer.listen(process.env.PORT || 4000, '0.0.0.0', function() {
+  console.log(`Listening on port ${process.env.PORT || 4000}`);
+});
